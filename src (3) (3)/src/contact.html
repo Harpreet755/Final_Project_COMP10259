@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="sass.css">
+</head>
+<body>
+    <section>
+        <header>
+            <a href="index.html"></a>
+            <ul id="menu">
+                <li><a href="index.html#home">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#predators">Prey & Predators</a></li>
+					<li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#count">World Count</a></li>
+          <li><a href="honesty.html">Honesty Declaration</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </header>
+    </section>
+    <div class="container">
+        <form onsubmit="return validateForm()" action="https://formspree.io/f/xdorqegk"
+        method="POST">
+            <h3>Join Us</h3>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter Your First Name" onchange="validateFirstName()" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter Your Last Name" onchange="validateLastName()" required>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email ID" onchange="validateEmail()" required>
+            <input type="text" id="date" name="date" placeholder="dd/mm/yy" onchange="validateDate()" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" onchange="validatePhone()" required>
+            <textarea name="message" id="message" name="message" rows="4" placeholder="How can we help you?" onchange="validateMessage()" required></textarea>
+            <button type="submit" class="original-button" >Submit</button>
+        </form>
+        <script>
+            function validateFirstName() {
+                let firstName = document.getElementById("firstName").value;
+                if (firstName.length < 5) {
+                    alert("First name should be at least 5 characters.");
+                    return false;
+                }
+                return true;
+            }
+            function validateLastName() {
+                let lastName = document.getElementById("lastName").value;
+                if (lastName.length < 5) {
+                    alert("Last name should be at least 5 characters.");
+                    return false;
+                }
+                return true;
+            }
+            function validateEmail() {
+                let email = document.getElementById("email").value;
+                // Add your email validation logic here, e.g., using a regular expression
+                // For simplicity, I'll check if it contains '@'
+                if (!email.includes('@')) {
+                    alert("Email should contain the domain name (with '@').");
+                    return false;
+                }
+                return true;
+            }
+            function validateDate() {
+                let date = document.getElementById("date").value;
+                // Add your date validation logic here, e.g., using a regular expression
+                // For simplicity, I'll check if it has the format dd/mm/yy
+                if (!/\d{2}\/\d{2}\/\d{2}/.test(date)) {
+                    alert("Date must have the appropriate format (dd/mm/yy).");
+                    return false;
+                }
+                return true;
+            }
+            function validatePhone() {
+                let phone = document.getElementById("phone").value;
+                // Add your phone validation logic here, e.g., checking if it contains 10 digits
+                // For simplicity, I'll check if it has exactly 10 digits
+                if (!/^\d{10}$/.test(phone)) {
+                    alert("Phone must contain 10 digits.");
+                    return false;
+                }
+                return true;
+            }
+            function validateMessage() {
+                let message = document.getElementById("message").value;
+                //  checking if it has at least 50 alphabets
+                if (message.length < 50) {
+                    alert("Message must be of at least 50 characters.");
+                    return false;
+                }
+                return true;
+            }
+            function validateForm() {
+                // Call all validation functions and return false if any fails
+                return (
+                    validateFirstName() &&
+                    validateLastName() &&
+                    validateEmail() &&
+                    validateDate() &&
+                    validatePhone() &&
+                    validateMessage()
+                );
+            }
+        </script>
+
+    </div>
+</body>
+</html>

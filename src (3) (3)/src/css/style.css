@@ -1,0 +1,389 @@
+/* Designing overall page*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+/*Setting Up CSS Box Model*/
+*{
+	box-sizing: border-box;
+	margin:0;
+}
+
+/*Setting Up Body*/
+body{
+  margin:0;
+  line-height: 1.5;
+  background-color: #b6b4b3;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+ }
+
+/*Designing Container Classes*/
+  .container{
+    max-width: 1170px;
+    margin:auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+
+/* Designing Header */
+.header{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	z-index:99;
+	transition: all 0.5s ease;
+}
+
+.header.fixed{
+	background-color: #ffffff;
+	position: fixed;
+}
+.header .fish-name{
+	padding:0 15px;
+}
+.header .fish-name a{
+	text-decoration: none;
+	font-size: 30px;
+	color:#ffffff;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing:2px;
+	transition: all 0.5s ease;
+}
+.header.fixed .fish-name a{
+	color:#000000;
+}
+
+
+.header .nav-toggle{
+	width: 40px;
+	height: 34px;
+	border:1px solid #ffffff;
+	border-radius: 3px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.5s ease;
+	display: none;
+}
+.header.fixed .nav-toggle{
+   border-color: #000000;
+}
+.header .nav-toggle span{
+	height: 1px;
+	display: block;
+	width: 16px;
+	background-color: #ffffff;
+	position: relative;
+	transition: all 0.5s ease;
+}
+.header .nav-toggle span:before,
+.header .nav-toggle span:after{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	height: 1px;
+	width: 100%;
+	background-color: #ffffff;
+	transition: all 0.5s ease;
+}
+.header.fixed .nav-toggle span,
+.header.fixed .nav-toggle span:before,
+.header.fixed .nav-toggle span:after{
+  background-color: #000000;
+}
+.header .nav-toggle span:before{
+	transform:translateY(-6px);
+}
+.header .nav-toggle span:after{
+	transform:translateY(6px);
+}
+
+.header .nav{
+	padding:0 15px;
+}
+.header .nav ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 30px;
+}
+.header .nav ul li a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	color:#ffffff;
+	padding:25px 0;
+	display: block;
+	transition: all 0.5s ease;
+}
+.header.fixed .nav ul li a{
+  color:#000000;
+}
+.header.fixed .nav ul li a:hover,
+.header .nav ul li a:hover{
+	color:#FF9800;
+}
+
+/* Designing Home section */
+.home-section{
+    min-height: 100vh;
+    background-image: url('../img/background3.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    padding:0 15px;
+	text-decoration-color: #ffffff;
+}
+#home1{
+	color: #ffffff;
+	margin: 10px;
+	padding: 100px;
+	text-align: center;
+	font-size: 50px;
+}
+
+#para{
+	color: #ffffff;
+	font-size: 25px;
+	transition: color 0.5s ease-in-out;
+
+}
+#facts{
+	color: #ffffff;
+	font-size: 25px;
+	
+}
+#para:hover {
+	color: #ed9c9c;
+}
+#para2{
+	color: #ffffff;
+	font-size: 25px;
+	margin-top: 20px;
+}
+#para2:hover {
+	color: red; /* Change the color to your desired hover state */
+ }
+
+/* Designing About section */
+.about-section{
+	padding:80px 0 0;
+	background-color: #ed9c9c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ed9c9c;
+	background-image: url('../img/background2.jpeg');
+	background-size: cover;
+	background-position: center;
+}
+.about-section h2 {
+    color: #333;
+    font-size: 50px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    margin-left: 15px;
+}
+
+.about-section ul li {
+    margin-bottom: 30px;
+}
+
+.about-section ul li strong {
+    font-weight: bold;
+}
+
+.about-section p:last-child {
+    margin-top: 50px;
+}
+
+/* General Section Styles */
+.predators-section {
+    padding: 80px 20px; /* Adjust padding as needed */
+    text-align: center;
+    background-color: rgb(135, 223, 223);
+    color: #333;
+}
+
+/* Heading Styles */
+.predators-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styles */
+.predators-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* List Styles */
+.predator-list, .prey-list {
+    margin-top: 30px;
+}
+
+.predator-list h2, .prey-list h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.predator-list h3, .prey-list h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.predator-list ul, .prey-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.predator-list li, .prey-list li {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+/* Optional: Add hover styles for a more interactive feel */
+.predator-list li:hover, .prey-list li:hover {
+    color: #007BFF; /* Change color on hover */
+    cursor: pointer;
+}
+
+
+
+/* Designing Gallery Section */
+.gallery-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+	background-color: #f2f2f2;
+}
+
+.image-gallery figure {
+    text-align: center;
+}
+
+.image-gallery img {
+    width: 60%; /* Adjust the width as needed for larger images */
+    height: auto;
+}
+
+.image-gallery figure:nth-child(2) img {
+    width: 60%; /* Adjust the width for the second image (make it smaller) */
+}
+
+.video-gallery {
+    text-align: center;
+}
+
+.video-gallery iframe {
+    width: 60%; /* Adjust the width as needed for the videos */
+    height: 300px; /* Set a fixed height for the videos */
+}
+
+.gallery-section h2 {
+    color: #333;
+    text-align: center;
+}
+
+
+
+/* Designing World Count Section */
+
+.count-section{
+	padding:80px 0 0;
+	background-color: rgb(180, 228, 212);
+	background-image: url(../img/background2.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+
+.honesty {
+    margin-top: 80px;
+    text-align: center;
+	background-color: #333;
+	color: #f2f2f2;
+}
+
+.honesty ul {
+    list-style: none;
+	color: #f2f2f2;
+}
+
+.honesty ol {
+    list-style: none;
+	color: #f2f2f2;
+}
+
+.honesty a {
+    color: #f2f2f2;
+}
+table,th,td {
+	border: 2px solid white;
+	padding: 8px;
+	margin: 100px;
+	border-collapse: collapse;
+	border-spacing: 4px;
+	background-color: pink
+}
+table,th{
+	background-color: #000000;
+	color: #fff;
+}
+#worldcount {
+	margin-left: 6px;
+	color: black;
+}
+.copyright{
+	background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+#migration{
+	background-color: #333;
+}
+#NOAA{
+	background-color: #333;
+}
+#marine{
+	background-color: #333;
+}
+@keyframes rotate {
+	0% { transform: rotate(0deg); }
+	50% { transform: rotate(5deg); }
+	100% { transform: rotate(0deg); }
+	0% {background-color: red; }
+    25% {background-color: yellow; }
+    50% {background-color: aqua; }
+    75% {background-color: blue; }
+    100% {background-color: green; }
+ }
+ 
+ .fish-name a {
+	display: inline-block;
+	animation: rotate 3s infinite;
+ }
+ 

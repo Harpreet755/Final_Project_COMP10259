@@ -1,0 +1,267 @@
+<!-- Your main page should go here -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Write your species name under the title -->
+	<title>Atlantic Salmon</title>
+	<link rel="stylesheet" href="css/lightbox.min.css">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="sass.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="lightbox.min.js"></script>
+	<script>
+        $(document).ready(function () {
+            // Keep the navigation bar fixed through jQuery
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.header').addClass('fixed');
+                } else {
+                    $('.header').removeClass('fixed');
+                }
+            });
+
+            // Make the lightbox images and videos (Gallery) displayed as a slideshow
+            // You can use a plugin like Fancybox or implement your own slideshow logic
+
+            // Close the slideshow by clicking anywhere outside the slideshow part
+            $(document).on('click', function (e) {
+                if (!$('.image-gallery, .video-gallery').is(e.target) && $('.image-gallery, .video-gallery').has(e.target).length === 0) {
+                    // Close your slideshow here
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<!-- Header Start -->
+<header class="header">
+	<div class="container">
+		<div class="row justify-content-between align-items-center">
+			<div class="fish-name">
+                <!-- Write your species name under the anchor tag -->
+				<a href="index.html">Atlantic Salmon</a>
+			</div>
+	 <div class="nav-toggle">
+	   <span></span>
+	 </div>
+			<nav class="nav">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#predators">Prey & Predators</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#count">World Count</a></li>
+                    <li><a href="honesty.html">Honesty Declaration</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<!-- Header End -->
+
+<!-- Home Section Start -->
+<section class="home-section" id="home">
+	<h2 id="home1">Welcome to the World of Atlantic Salmon!</h2>
+	<p id="para">Embark on a captivating journey into the life of Atlantic salmon, a remarkable species that navigates the diverse landscapes
+		 of freshwater rivers and the vast expanses of the ocean</p>
+		 <div class="key-facts" id="facts">
+			<h3>Key Facts:</h3>
+			<ul>
+				<li>Atlantic salmon are anadromous, meaning they migrate between freshwater and saltwater.</li>
+				<li>Their life cycle involves spawning in rivers, followed by a migration to the ocean, and eventually returning to their natal rivers to reproduce.</li>
+				<li>These resilient fish play a crucial role in maintaining the ecological balance of their habitats.</li>
+			</ul>
+		</div>
+		<p id="para2">Come along as we delve into the remarkable characteristics and obstacles encountered
+			 by Atlantic salmon throughout their extraordinary life journey.</p>
+	
+</section>
+<!-- Home Section End -->
+
+<!-- About Section Start -->
+<section class="about-section" id="about">
+	<h2>About Atlantic Salmon</h2>
+    <p>The Atlantic salmon (Salmo salar) is a revered migratory fish species renowned for its extraordinary voyage between freshwater and saltwater habitats.</p>
+    
+    <p>These remarkable fish are recognized for the following characteristics:</p>
+
+    <ul>
+        <li><strong>Life Cycle:</strong>Atlantic salmon undergo a intricate life cycle, commencing with their hatching in rivers of freshwater. Following a span of several years within their native rivers, they initiate an impressive migration towards the ocean.</li>
+        <li><strong>Migration:</strong>The transition to the ocean represents a crucial stage in which Atlantic salmon adjust to the conditions of saltwater. This expedition spans extensive distances and encompasses navigating diverse challenges in the marine environment.</li>
+        <li><strong>Spawning:</strong>Mature salmon journey back to their birth rivers for the purpose of spawning. Female salmon construct nests, known as redds, in the gravel of riverbeds to deposit their eggs, with males subsequently fertilizing them.</li>
+        <li><strong>Ecological Importance:</strong>Atlantic salmon fulfill a crucial role within the ecosystems they occupy. Through their migration, they contribute essential nutrients to both freshwater and marine environments, impacting the abundance of other species.</li>
+        <li><strong>Conservation:</strong>Regrettably, populations of Atlantic salmon confront challenges such as overfishing, degradation of habitats, and the effects of climate change. Essential efforts in conservation are imperative to guarantee the survival of this species.</li>
+    </ul>
+
+    <p>Discover the captivating realm of Atlantic salmon, beginning with their early phases in untouched rivers and extending to their tenacity in the expansive oceans.</p><br><br>
+	
+</section>
+<!-- About Section End -->
+
+<!-- Prey & Predators Section Start -->
+<section class="predators-section" id="predators">
+	<h1>Prey & Predators</h1><br>
+    <p>Discover the intricate dynamics of Atlantic salmon's interactions with its environment, including its role as both prey and predator.</p>
+	<div class="predator-list">
+        <h2>Predators:</h2><br>
+		<h3>Large Predatory Fishes:</h3>
+        <ul>
+            <li>Atlantic Halibut</li>
+            <li>Atlantic Bluefin Tuna</li>
+			<li>Swordfish</li>
+			<li>Striped Bass</li>
+            <!-- Add more predators if needed -->
+        </ul>
+		<h3>Other Predators:</h3>
+		<ul>
+			<li>Greenland Shark</li>
+			<li>Mako Sharks</li>
+			<li>Porbeagle Sharks</li>
+		</ul>
+		<h3>Seabirds:</h3>
+		<ul>
+			<li>Northen Gannet</li><br>
+		</ul>
+    </div>
+	<div class="prey-list">
+        <h2>Prey:</h2>
+        <ul>
+			<li>Atlantic Herring</li>
+            <li>Small Fish</li>
+            <li>Aquatic Insects</li>
+            <li>Rainbow Smelt</li>
+			<li>Capelin</li>
+			<li>Mummichogs</li>
+			<li>Sand Lances</li>
+			<li>Flatfish and Small Atlantic Mackerel</li>
+            <!-- Add prey species here -->
+        </ul>
+    </div>
+</section>
+<!-- Prey & Predators Section End -->
+
+<!-- Gallery Section Start -->
+<section class="gallery-section" id="gallery">
+	<h2>Gallery</h2>
+	<div class="image-gallery">
+		<figure>
+			<a href="img/image12.jpeg" data-lightbox="gallery1" data-title="image1"><img src="img/image12.jpeg" alt="Atlantic Salmon image 1">
+				<figcaption>Atlantic Salmon in Coastal Waters</figcaption></a>
+            
+        </figure>
+		<figure>
+			<a href="img/image2.jpg" data-lightbox="gallery1" data-title="imgage2"></a><img src="img/image2.jpg" alt="Atlantic Salmon Image 2">
+            <figcaption>Atlantic Salmon Spawning</figcaption>
+            
+        </figure>
+		<figure>
+			<a href="img/image 3.jpeg" data-lightbox="gallery1" data-title="image3"></a> <img src="img/image 3.jpeg" alt="Atlantic Salmon Image 3">
+            <figcaption>Atlantic Salmon Migration</figcaption>
+            
+        </figure>
+		<figure>
+			<a href="img/image 4.jpeg" data-lightbox="gallery1" data-title="image4"></a><img src="img/image 4.jpeg" alt="Atlantic Salmon Image 4">
+            <figcaption>Atlantic Salmon Juvenile Stage</figcaption>
+            
+        </figure>
+		<figure>
+			<a href="img/image 5.jpeg" data-lightbox="gallery1" data-title="image5"></a><img src="img/image 5.jpeg" alt="Atlantic Salmon Image 5">
+            <figcaption>Atlantic Salmon Aquaculture</figcaption>
+            
+        </figure>
+	</div>
+	<div class="video-gallery">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/2xG6waimZnI?si=jVJNZYNaoAqahara" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+
+        
+        
+	
+</section>
+<!-- Gallery Section End --> 
+
+<!-- World Count Section Start -->
+ <section class="count-section" id="count">
+	<h2 id="worldcount">World Count</h2>
+	<table id="tab">
+		<thead>
+			<tr>
+				<th>Statistics</th>
+				<th>Value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Average Lifespan:</td>
+				<td>The wild lifespan ranges from 3 to 8 years, subject to environmental influences.</td>
+			</tr>
+			<tr>
+				<td>Migration Duration:</td>
+				<td>It takes 2-3 years in the ocean before returning for the spawning phase.</td>
+			</tr>
+			<tr>
+				<td>Spawning Frequency:</td>
+				<td>Altantic salmon can can engage in multiple reproductive cycles.</td>
+			</tr>
+			<tr>
+				<td>Spawning Habitat:</td>
+				<td>Females creats nests in light gravel on river bottoms for egg deposition.</td>
+			</tr>
+			<tr>
+				<td>Reproductive Behavior:</td>
+				<td>External Fertilization occurs, followed by the bruial of laid eggs by females</td>
+			</tr>
+			<tr>
+				<td>Habitat during Juvenile Stage:</td>
+				<td>Riverine environments host Atlantic salmon for 2-3 years before their migration to the ocean.</td>
+			</tr>
+			<tr>
+				<td>Major Threats:</td>
+				<td>Overfishing, climate change, and competion from nonnative species pose significant risks.</td>
+			</tr>
+			<tr>
+				<td>Predators:</td>
+				<td>Sometimes, ocras and shortfin</td>
+			</tr>
+			<tr>
+				<td>Top-speed:</td>
+				<td>25 mph</td>
+			</tr>
+			<tr>
+				<td>Weight:</td>
+				<td>3.6 to 5.4 kg (7.9 to 11.9 lb)</td>
+			</tr>
+			<tr>
+				<td>Conservation Status:</td>
+				<td>Numerous subpopulations face critical extinction.</td>
+			</tr>
+			<tr>
+				<td>Aquacultural Importance:</td>
+				<td>Globally, Atlantic salmon is key species in marine fish farming.</td>
+			</tr>
+			<tr>
+				<td>Framed vs. Wild Salmon in the Market:</td>
+				<td>The majority of Atlamntic salmon available in the U.S. market is sourced from aquaculture.</td>
+			</tr>
+			<tr>
+				<td>Environmental Indicator:</td>
+				<td>Recognized as an indicator species. Atlantic salmon health mirrors broader conditions in marine ecosystems.</td>
+			</tr>
+		</tbody>
+	</table><br><br>
+   
+</section>
+<!-- World Count Section End -->
+
+ <!-- Write your name under the para tag -->
+<p class="copyright">&copy; 2023 Harpreet Kaur and Princedeep Singh. All rights reserved</p>
+<p id="marine">sources:<a href="https://oceana.org/marine-life/atlantic-salmon/"></a>Marine Life Encyclopedia Ocean Fishes</p>
+<p id="migration">Sources:<a href="https://thefishingdaily.com/latest-news/new-study-reveals-the-migration-route-of-atlantic-salmon-at-sea/"></a>The migration route of atlantic salmon at sea.</p>
+<p id="NOAA">Sources:<a href="https://www.fisheries.noaa.gov/national/outreach-and-education/fun-facts-about-amazing-atlantic-salmon#:~:text=In%20the%20ocean%2C%20Atlantic%20salmon,such%20as%20the%20Northern%20gannet.">NOAA fisheries</a></p>
+
+</body>
+</html>
